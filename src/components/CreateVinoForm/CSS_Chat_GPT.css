@@ -1,0 +1,75 @@
+/* Estilos para el contenedor principal del formulario */
+.createActivityGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px; /* Agregamos un espaciado interno */
+    margin-top: 300px;
+    margin-bottom: 150px;
+  }
+  
+  /* Estilos para el contenedor del formulario */
+  .contentCreate {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Opcional: asegura que el formulario ocupe todo el ancho */
+  }
+  
+  /* Estilos para los campos de entrada */
+  .inputText,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los mensajes de error */
+  .p {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  /* Estilos para el botón de envío */
+  .botonCreate {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Agregamos un espaciado superior */
+  }
+  
+  .botonCreate:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el botón de regreso */
+  .botonback button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Agregamos un espaciado superior */
+  }
+  
+  .botonback button:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para el contenedor de las secciones */
+  .sectionContainer {
+    margin-bottom: 20px;
+  }
+  

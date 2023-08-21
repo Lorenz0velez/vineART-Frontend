@@ -50,3 +50,16 @@ export const getVinoById = (id) =>{
         }
     }
 }
+
+
+export const createNewVino = (payload) => {
+    return async function (dispatch) {
+      try {
+        var response = await axios.post(`/create`, payload);
+        console.log(response);
+        return response
+      } catch (e) {
+        alert(e)
+      }        
+    }
+  };
