@@ -1,9 +1,8 @@
 import axios from 'axios';
 export const GET_ALL_VINO = "GET_ALL_VINO";
-export const GET_VINO_BY_NAME = "GET_COUVINO_NAME";
+export const GET_VINO_BY_NAME = "GET_VINO_BY_NAME";
 export const GET_VINO_BY_ID = "GET_VINO_BY_ID";
-
-
+export const ADD_CART = "ADD_CART";
 
 export const getAllVinos = () => {
   return async function(dispatch){
@@ -63,3 +62,12 @@ export const createNewVino = (payload) => {
       }        
     }
   };
+
+  // export const addToCart = (vinoID) => {
+  //   return { type: ADD_CART, payload: vinoID };
+  // };
+
+  export const addToCart = (vinoID) =>{
+    console.log('vinoID:',vinoID);
+    return { type: ADD_CART, payload: vinoID };
+  }

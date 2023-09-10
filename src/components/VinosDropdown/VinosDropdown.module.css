@@ -1,0 +1,66 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  color: white;
+  background-color: black;
+  border: none;
+  font-weight: normal; /* Asegúrate de que el peso de fuente sea normal por defecto */
+
+  &:hover {
+    text-decoration: underline 0.2em;
+    font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
+    font-size: 16px;
+  }
+
+}
+
+
+.dropdown_content{
+  list-style: none;
+  display: flex;
+  background-color: rgba(240, 45, 45, 0.596);
+
+  position: absolute;
+  z-index: 1;
+
+  justify-content: space-between;
+  align-self: center;
+
+  width: 1348px;
+  margin: 10px;
+  /* width: 900px; */
+  height: 220px;
+}
+
+.column{
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  display: flex; /* Establece el contenedor de columna como flex */
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: flex-start; /* Centra los elementos verticalmente */
+}
+
+.column h1{
+  font-size: 18px;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+}
+
+.column ul li{
+  list-style: none;
+  align-self: flex-start;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,261 @@
+{/* ---------------------------------------------------------------------------- */}
+        <div className={'container_vinos'}>
+        <div className={`dropdown ${isOpen ? 'open' : ''}`} onDoubleClick={closeDropdown}>
+      <button onClick={toggleDropdown}>Vinos</button>
+      <div className={`dropdown-container ${isOpen ? 'open' : ''}`} >
+      <div className="dropdown-content">
+        {/* Contenido del DROPDOWN */}
+        <div className="column">
+    <h1>TINTOS</h1>
+    <ul>
+      <li>Malbec</li>
+      <li>Cabernet Sauvignon</li>
+      <li>Cabernet Franc</li>
+      <li>Blends</li>
+    </ul>
+  </div>
+  <div className="column">
+    <h1>BLANCOS</h1>
+    <ul>
+      <li>Malbec</li>
+      <li>Cabernet Sauvignon</li>
+      <li>Cabernet Franc</li>
+      <li>Blends</li>
+    </ul>
+  </div>
+  <div className="column">
+    <h1>BODEGAS</h1>
+    <ul>
+      <li>Malbec</li>
+      <li>Cabernet Sauvignon</li>
+      <li>Cabernet Franc</li>
+      <li>Blends</li>
+    </ul>
+  </div>
+  <div className="column">
+    <h1>LINEAS</h1>
+    <ul>
+      <li>Malbec</li>
+      <li>Cabernet Sauvignon</li>
+      <li>Cabernet Franc</li>
+      <li>Blends</li>
+    </ul>
+  </div>
+      </div>
+      </div>
+    </div>
+</div>
+{/* ---------------------------------------------------------------------------- */}
+
+
+CSS  
+.active { /*ESTA CLASE CORRESPONDE A CUALQUIER LINK ACTIVO*/
+    background-color: #1d4ed8;
+}
+
+.iconCart{
+    background-color: white;
+}
+
+.search-icon{
+    display: none;
+}
+
+.searchBar{
+    display: block;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8c0c0;
+    position: sticky;
+    top: 0;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: none;
+}
+
+.navbar-responsive{
+    display: none;
+}
+
+.navbar-web{
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    align-self: center;
+    justify-content: center; /* Centra horizontalmente los iconos */
+    align-items: center;
+}
+
+
+nav ul li a:not(.active) {
+    background-color: #6075b9;
+}
+
+.iconos_responsive_480p{
+    display: none;
+}
+
+.icon-svg{
+    color:white;
+    height: 80%;
+    width: 100px;
+}
+
+/* Dropdown.css */
+.container_vinos{
+    display: flex;
+    width: 150px;
+}
+
+
+.dropdown {
+    position: relative;
+    display:block;
+    width: 100%;
+    background-color: aqua;
+  }
+  
+  .dropdown button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+  }
+
+
+  .dropdown-container {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    z-index: 2;
+  }
+  
+  /* Estilos cuando el dropdown está abierto */
+  .dropdown.open .dropdown-container {
+    display: block;
+   min-width: 100%;
+   max-width: 100%;
+    /*width:900px; */ /* Ocupa 100% del ancho de la pantalla cuando está abierto */
+  }
+
+  .dropdown-content {
+    display: flex;
+    overflow: hidden;
+    max-height: 0; /* Establece la altura inicial en 0 */
+    transition: max-height 0.3s ease; /* Agrega una transición suave de altura */
+  }
+
+  .dropdown.open{
+    width: 100%;
+  }
+  
+  .open .dropdown-content {
+    max-height: 500px; /* Ajusta la altura máxima según sea necesario */
+    transition: max-height 0.5s ease; /* Mantén la misma transición */
+    width: 100%;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    align-items: center;
+  }
+  
+  .column h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-self: flex-start;
+
+    margin-left: 40px;
+
+  }
+
+  .column ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    align-items: flex-start;
+    /* background-color: #f1b9b9; */
+  }
+
+  .column ul li {
+    display: flex;
+    list-style: none;
+
+    align-self: flex-start;
+  }
+
+  @media (max-width:880px){
+
+ .dropdown, .dropdown-container, .container_vinos {
+      display: none;
+    }
+
+
+    .navbar-web{
+        display: none;
+    }
+    .navbar-responsive{
+        display: flex;
+    }
+    nav ul li a {
+        align-self: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin: 0.2rem 0.5rem;
+        padding: 5px;
+    }
+
+    .iconos_responsive_480p{
+        display: flex;
+        align-self: center;
+    }
+    .search-icon{
+        display: flex;
+    }
+    .searchBar{
+        display: none;
+    }
+}

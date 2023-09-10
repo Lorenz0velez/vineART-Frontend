@@ -1,0 +1,68 @@
+/* Estilos para la tarjeta de vino */
+.wine-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: 300px;
+  }
+  
+  .wine-image {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .wine-name {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .wine-varietal {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .wine-sale-patch {
+    background-color: #ff5733;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .wine-price {
+    margin-top: 10px;
+  }
+  
+  .wine-individual-price {
+    font-size: 18px;
+    color: #ff5733;
+  }
+  
+  .wine-box-price {
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+  }
+  
+  .wine-save-button,
+  .wine-add-to-cart-button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .wine-save-button:hover,
+  .wine-add-to-cart-button:hover {
+    background-color: #e63c00;
+  }
+  

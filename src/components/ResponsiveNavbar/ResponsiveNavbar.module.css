@@ -1,0 +1,199 @@
+/* .active { /*ESTA CLASE CORRESPONDE A CUALQUIER LINK ACTIVO
+  background-color: #1d4ed8;
+} */
+
+.iconCart{
+  background-color: white;
+}
+
+.search_icon{
+  display: none;
+}
+
+.searchBar{
+  display: block;
+}
+
+nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #383434;
+  position: sticky;
+  top: 0;
+}
+
+nav .title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: none;
+}
+
+.navbar_responsive{
+  display: none;
+}
+
+.navbar_web{
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  align-self: center;
+  justify-content: center; /* Centra horizontalmente los iconos */
+  align-items: center;
+  &:hover{
+    text-decoration: underline;
+  }
+
+}
+
+
+nav ul li a:not(.active) {
+  background-color: transparent;
+  /* background-color: #6075b9; */
+}
+
+.iconos_responsive_480p{
+  display: none;
+}
+
+.icon-svg{
+  color:white;
+  height: 80%;
+  width: 100px;
+}
+
+@media (max-width:880px){
+
+  .navbar_web{
+      display: none;
+  }
+  .navbar_responsive{
+      display: flex;
+  }
+  nav ul li a {
+      align-self: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      margin: 0.2rem 0.5rem;
+      padding: 5px;
+  }
+
+  .iconos_responsive_480p{
+      display: flex;
+      align-self: center;
+  }
+  .search_icon{
+      display: flex;
+  }
+  .searchBar{
+      display: none;
+  }
+}
+
+
+/* DROPDOWN CSS */
+.dropdown {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.dropdown button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-top: 18px;
+  margin-right: 48px;
+
+  &:hover {
+    text-decoration: underline 0.2em;
+    font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
+    font-size: 16px;
+  }
+
+}
+
+.dropdownasasa button {
+  color: white;
+  background-color: black;
+  border: none;
+  font-weight: normal; /* Asegúrate de que el peso de fuente sea normal por defecto */
+
+  &:hover {
+    text-decoration: underline 0.2em;
+    font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
+    font-size: 16px;
+  }
+
+}
+
+
+.dropdown_content{
+  position: fixed;
+  width: 100%;
+  left: 15px;
+  max-width: 1320px;
+  top: 13.8281px;
+
+  z-index: 1;
+  background-color: rgba(240, 45, 45, 0.596);
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-right: 10px;
+}
+
+
+.column{
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  display: flex; /* Establece el contenedor de columna como flex */
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: flex-start; /* Centra los elementos verticalmente */
+}
+
+.column h1{
+  font-size: 18px;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+}
+
+.column ul li{
+  list-style: none;
+  align-self: flex-start;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,56 @@
+/* Estilos para el componente CartDetailCard actualizado */
+
+.cart-detail-card {
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 16px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.cart-detail-card-image-container {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-detail-card-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cart-detail-card-info {
+  flex: 2;
+  padding: 10px;
+}
+
+.cart-detail-card-name {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.cart-detail-card-varietal {
+  font-style: italic;
+}
+
+.cart-detail-card-price-box {
+  color: #00a5e1;
+}
+
+.cart-detail-card-price-bottle {
+  color: #00a5e1;
+}
+
+.cart-detail-card-bottles-pack {
+  font-weight: bold;
+}
+
+.cart-detail-card-composition {
+  margin-top: 8px;
+}
+
+.cart-detail-card-aging {
+  margin-top: 8px;
+}

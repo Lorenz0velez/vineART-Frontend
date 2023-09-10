@@ -1,0 +1,43 @@
+/* Estilos para el componente CartDetail */
+
+.cart-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-detail-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cart-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Estilos adicionales según tus preferencias */
+  
+
+  /* Estilos adicionales según tus preferencias */
+/* .cart-summary {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #df313149;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.1);
+
+  height: 100%;
+  width: 25%;
+}
+
+.purchase-button {
+  display: flex;
+  margin-top: 10px;
+  align-self: baseline;
+} */
