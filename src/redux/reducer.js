@@ -20,7 +20,8 @@ const rootReducer = (state = initialState, action) => {
         case GET_VINO_BY_NAME:
             return{
                 ...state,
-                vinosFiltered: action.payload !== [] ? action.payload : alert('Perro no encontrado')
+                // vinosFiltered: action.payload !== [] ? action.payload : alert('Perro no encontrado')
+                vinosFiltered: action.payload
             };
 
         case GET_VINO_BY_ID:

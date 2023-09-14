@@ -1,14 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
-import { Routes, Route, Navigate, isRouteErrorResponse } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from './views/Home/Home';
 import axios from 'axios';
 import ResponsiveNavbar from './components/ResponsiveNavbar/ResponsiveNavbar';
-import User from './components/TestsComponents/USER';
-import Services from './components/TestsComponents/SERVICES';
 import CartDetail from './views/CartDetail/CartDEtail';
-import { faForwardStep } from '@fortawesome/free-solid-svg-icons';
-import { VinosDropdown } from './components/VinosDropdown/VinosDropdown';
+import CartSidebar from './components/CartSidebar/CartSidebar';
 
 axios.defaults.baseURL = "http://localhost:3001/" ;
 // axios.defaults.baseURL = "https://vineart-backend-production.up.railway.app/" ;
@@ -19,8 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/cart" element={<CartDetail/>} />
-      <Route path="/user" element={<VinosDropdown/>} />
-      {/* <Route path="/vinos" element={<VinosView/>} /> */}
+      <Route path="/user" element={<CartSidebar/>} />
       </Routes>
     </div>
   );

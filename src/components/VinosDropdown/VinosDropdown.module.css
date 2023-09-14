@@ -1,38 +1,40 @@
 .dropdown {
+  display: flex;
   position: relative;
+  align-items: center;
 }
 
 .dropdown button {
+  font-size: 16px;
   color: white;
-  background-color: black;
+  background-color: transparent;
   border: none;
-  font-weight: normal; /* Asegúrate de que el peso de fuente sea normal por defecto */
+  margin-top: 18px;
+  margin-right: 48px;
 
   &:hover {
-    text-decoration: underline 0.2em;
     font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
-    font-size: 16px;
   }
 
 }
 
 
 .dropdown_content{
-  list-style: none;
-  display: flex;
-  background-color: rgba(240, 45, 45, 0.596);
+  position: fixed;
+  width: 100%;
+  left: 15px;
+  max-width: 1320px;
+  top: 13.8281px;
 
-  position: absolute;
   z-index: 1;
-
-  justify-content: space-between;
+  background-color: rgba(240, 45, 45, 0.596);
+  display: flex;
   align-self: center;
-
-  width: 1348px;
-  margin: 10px;
-  /* width: 900px; */
-  height: 220px;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-right: 10px;
 }
+
 
 .column{
   margin-right: 5px;

@@ -1,5 +1,5 @@
 /* Estilos para la tarjeta de vino */
-.wine-card {
+.wine_card {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
@@ -10,22 +10,22 @@
     max-width: 300px;
   }
   
-  .wine-image {
+  .wine_image {
     max-width: 100%;
     border-radius: 5px;
   }
   
-  .wine-name {
+  .wine_name {
     font-size: 24px;
     margin: 10px 0;
   }
   
-  .wine-varietal {
+  .wine_varietal {
     font-style: italic;
     color: #888;
   }
   
-  .wine-sale-patch {
+  .wine_sale_patch {
     background-color: #ff5733;
     color: white;
     padding: 5px 10px;
@@ -34,23 +34,23 @@
     display: inline-block;
   }
   
-  .wine-price {
+  .wine_price {
     margin-top: 10px;
   }
   
-  .wine-individual-price {
+  .wine_individual_price {
     font-size: 18px;
     color: #ff5733;
   }
   
-  .wine-box-price {
+  .wine_box_price {
     font-size: 16px;
     color: #888;
     text-decoration: line-through;
   }
   
-  .wine-save-button,
-  .wine-add-to-cart-button {
+  .wine_save_button,
+  .wine_add_to_cart_button {
     background-color: #ff5733;
     color: white;
     border: none;
@@ -61,8 +61,22 @@
     cursor: pointer;
   }
   
-  .wine-save-button:hover,
-  .wine-add-to-cart-button:hover {
+  /* .wine_save_button:hover,
+  .wine_add_to_cart_button:hover {
     background-color: #e63c00;
   }
-  
+   */
+
+   .guardar_button{
+    background-color: #ff5733;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+   }
+   .guardar_button:hover{
+    background-color: #e63c00;
+   }

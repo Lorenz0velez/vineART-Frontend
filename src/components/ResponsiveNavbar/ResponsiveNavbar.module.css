@@ -61,9 +61,6 @@ nav ul li a {
   align-self: center;
   justify-content: center; /* Centra horizontalmente los iconos */
   align-items: center;
-  &:hover{
-    text-decoration: underline;
-  }
 
 }
 
@@ -112,6 +109,25 @@ nav ul li a:not(.active) {
   }
 }
 
+.novedades{
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-top: 6px;
+  margin-right: 48px;
+  text-decoration: none;
+
+  &:hover {
+    /* text-decoration: underline 0.2em; */
+    font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
+    /* font-size: 18px; */
+    /* margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: white;
+    border-bottom: 5px; */
+  }
+}
 
 /* DROPDOWN CSS */
 .dropdown {
@@ -121,6 +137,7 @@ nav ul li a:not(.active) {
 }
 
 .dropdown button {
+  font-size: 16px;
   color: white;
   background-color: transparent;
   border: none;
@@ -128,23 +145,7 @@ nav ul li a:not(.active) {
   margin-right: 48px;
 
   &:hover {
-    text-decoration: underline 0.2em;
     font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
-    font-size: 16px;
-  }
-
-}
-
-.dropdownasasa button {
-  color: white;
-  background-color: black;
-  border: none;
-  font-weight: normal; /* Asegúrate de que el peso de fuente sea normal por defecto */
-
-  &:hover {
-    text-decoration: underline 0.2em;
-    font-weight: bold; /* Cambia el peso de fuente a negrita en hover */
-    font-size: 16px;
   }
 
 }

@@ -1,41 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass, faCircleUser, faWineGlassEmpty } from '@fortawesome/free-solid-svg-icons'
 import SearchBar2 from '../SearchBar/SearchBar';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllVinos } from '../../redux/actions';
-import { VinosDropdown } from '../VinosDropdown/VinosDropdown';
 
 import styles from './ResponsiveNavbar.module.css';
+import { VinosDropdown } from '../VinosDropdown/VinosDropdown';
+import CartSidebar from '../CartSidebar/CartSidebar';
 
 
 const ResponsiveNavbar = () => {
 
-    //Esta parte es para el dropdown de vinos
-    const dispatch = useDispatch();
-    const allVinos = useSelector((state) => state.allVinos);
-  
-    const [isOpen, setIsOpen] = useState(false);
-  
-    useEffect(() => {
-      dispatch(getAllVinos());
-    }, [dispatch]);
-  
-    const toggleDropdown = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    const closeDropdown = () => {
-      setIsOpen(false);
-    };
-  
-
     //Esta parte se usa para el responsive
-  const [menuResponsiveActive, setMenuResponsiveActive] = useState(false);
-  const toggleMenu = () => {
-    setMenuResponsiveActive(!menuResponsiveActive);
-  };
+//   const [menuResponsiveActive, setMenuResponsiveActive] = useState(false);
   //----------------------------------------
 
   return (
@@ -50,7 +27,6 @@ const ResponsiveNavbar = () => {
             </svg>
             </div>
         </NavLink>
-        {/* <ul className={menuResponsiveActive ? "open" : "isNotOpenTheMenu"} > */}
         <ul className={styles.navbar_responsive} >
             <li>
                 <NavLink to={"/vinos"}>
@@ -76,55 +52,15 @@ const ResponsiveNavbar = () => {
 
 
         <ul className={styles.navbar_web} >
-            {/* <li style={{marginRight:100}}>
+            <li>
+                <NavLink>
+                    <button className={styles.novedades}>NOVEDADES</button>
+                </NavLink>
+            </li>
+            <li>
                 <NavLink>
                     <VinosDropdown/>
                 </NavLink>
-            </li> */}
-            <li>
-            <div>
-      <div className={styles.dropdown}>
-      <button onClick={toggleDropdown}>VINOS</button>
-      {isOpen ? (
-        <div className={styles.dropdown_content}>
-        <div className={styles.column}>
-                        <h1>TINTOS</h1>
-                        <ul>
-                            <li>Malbec</li>
-                            <li>Cabernet Sauvignon</li>
-                            <li>Cabernet Franc</li>
-                            <li>Blends</li>
-                        </ul>
-                    </div><div className={styles.column}>
-                            <h1>BLANCOS</h1>
-                            <ul>
-                                <li>Malbec</li>
-                                <li>Cabernet Sauvignon</li>
-                                <li>Cabernet Franc</li>
-                                <li>Blends</li>
-                            </ul>
-                        </div><div className={styles.column}>
-                            <h1>BODEGAS</h1>
-                            <ul>
-                                <li>Malbec</li>
-                                <li>Cabernet Sauvignon</li>
-                                <li>Cabernet Franc</li>
-                                <li>Blends</li>
-                            </ul>
-                        </div><div className={styles.column}>
-                            <h1>LINEAS</h1>
-                            <ul>
-                                <li>Malbec</li>
-                                <li>Cabernet Sauvignon</li>
-                                <li>Cabernet Franc</li>
-                                <li>Blends</li>
-                            </ul>
-                        </div>
-                        </div> // dropdown_content
-                         ) : null}
-      {/* {isOpen ? <div>Is Open</div> : <div>Is Closed</div>} */}
-    </div>
-        </div>
             </li>
             <li>
                 <div>
@@ -132,8 +68,9 @@ const ResponsiveNavbar = () => {
                 </div>
             </li>
             <li>
-                <NavLink className={styles.icon_cart} to={"/cart"}>
-                    <FontAwesomeIcon icon={faCartShopping} />
+                <NavLink>
+                {/* <FontAwesomeIcon icon={faCartShopping}/> */}
+                <CartSidebar/>
                 </NavLink>
             </li>
             <li>

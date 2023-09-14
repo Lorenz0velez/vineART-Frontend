@@ -1,7 +1,11 @@
 import React, {useEffect} from 'react';
-import './HomeCard.css'
+import styles from './HomeCard.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../redux/actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as lightFaBookMark } from '@fortawesome/free-solid-svg-icons';
+
 
 const WineCard = ({ 
   vinoID,
@@ -68,18 +72,34 @@ const handleClickAddCart = (event) => {
   }
 };
 
+// const handleClickSaveButton = (click) => {
+//   if (click = true){
+//     return(
+//       <FontAwesomeIcon icon={solid("bookmark")}className={styles.button_guardado}/>
+//     )
+//   } else{
+//     return(
+//       <FontAwesomeIcon icon={solid("bookmark")}className={styles.button_guardado}/>
+//     )
+//   }
+// }
+
 return (
-    <div className="wine-card">
-      <img src={imagen} alt={name} className="wine-image" />
-      <h2 className="wine-name">{name}</h2>
-      <p className="wine-varietal">{varietal}</p>
-      {<span className="wine-sale-patch">En oferta</span>}
-      <div className="wine-price">
-        <p className="wine-individual-price">${precioIndividual()}</p>
-        <p className="wine-box-price">${precio_por_caja}</p>
+    <div className={styles.wine_card}>
+      <img src={imagen} alt={name} className={styles.wine_image} />
+      <h2 className={styles.wine_name}>{name}</h2>
+      <p className={styles.wine_varietal}>{varietal}</p>
+      {
+        <span className={styles.wine_sale_patch} >En oferta</span>
+      }
+      <div className={styles.wine_price}>
+        <p className={styles.wine_individual_price}>${precioIndividual()}</p>
+        <p className={styles.wine_box_price}>${precio_por_caja}</p>
       </div>
-      <button className="wine-save-button" >Guardar</button>
-      <button className="wine-add-to-cart-button" onClick={handleClickAddCart}>Agregar al carrito</button>
+      {/* <FontAwesomeIcon icon={faBookmark} onClick={handleClickSaveButton(true)} className={styles.guardar_button}/> */}
+      <FontAwesomeIcon icon={lightFaBookMark} className={styles.guardar_button}/>
+      {/* <FontAwesomeIcon icon="fa-light fa-bookmark" className={styles.guardar_button}/> */}
+      <button className={styles.wine_add_to_cart_button} onClick={handleClickAddCart}>Agregar al carrito</button>
     </div>
   );
 };
